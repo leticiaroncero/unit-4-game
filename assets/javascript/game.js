@@ -32,8 +32,8 @@ $(".crystal-image").on("click", function () {
 })
 
 function reset() {
-    var randomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
+    randomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
     $("#target-number").text(randomNumber);
-    var totalScore = 0;
+    totalScore = 0;
     $("#total-score").text(totalScore);
 }
