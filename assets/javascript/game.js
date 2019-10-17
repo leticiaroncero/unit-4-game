@@ -16,7 +16,7 @@ for (var i = 0; i < 4; i++) {
 }
 
 $(".crystal-image").on("click", function () {
-    totalScore += $(this).attr("data-crystalvalue")
+    totalScore += parseInt($(this).attr("data-crystalvalue"))
     $("#total-score").text(totalScore);
 
 
@@ -36,4 +36,9 @@ function reset() {
     $("#target-number").text(randomNumber);
     totalScore = 0;
     $("#total-score").text(totalScore);
+    imageCrystal = $(".crystal-image");
+    for (var i = 0; i < 4; i++) {
+        randomValue = Math.floor(Math.random() * 12 + 1);
+        imageCrystal.eq(i).attr("data-crystalvalue", randomValue)
+    }
 }
