@@ -1,7 +1,7 @@
 var wins = 0
 var losses = 0
-var winsCounter = $()
-var winsCounter
+var winCounter = $("#wins")
+var lossCounter = $("#losses")
 
 var randomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
 $("#target-number").text(randomNumber);
@@ -17,13 +17,16 @@ for (var i = 0; i < 4; i++) {
 
 $(".crystal-image").on("click", function () {
     totalScore += $(this).attr("data-crystalvalue")
+    $("#total-score").text(totalScore);
 
 
     if (totalScore === randomNumber) {
         wins++
+        winCounter.text(wins)
         reset()
     } else if (totalScore > randomNumber) {
         losses++
+        lossCounter.text(losses)
         reset()
     }
 })
