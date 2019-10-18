@@ -1,0 +1,12 @@
+.crystal-image {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px #333333;
+    margin-left: 15px;
+}
+
+.crystal-image:active {
+    filter: brightness(70%);
+}
