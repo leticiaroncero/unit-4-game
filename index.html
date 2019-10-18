@@ -30,10 +30,21 @@
 
     <div class="container">
 
-        <div><span id="target-number"></span></div>
-        <div id="wins-and-losses">
-            <div id="wins">0</div>
-            <div id="losses">0</div>
+        <div class="card mt-1 bg-success">
+            <div class="card-body text-center">
+                <h4>Wins: <span id="wins">0</span></h4>
+            </div>
+        </div>
+        <div class="card mt-1 bg-danger">
+            <div class="card-body text-center">
+                <h4>Losses: <span id="losses">0</span></h4>
+            </div>
+        </div>
+        <div class="card mt-1 bg-gray">
+            <div class="card-body text-center">
+                <h4>Total: <span id="target-number"></span></h4>
+                <h4>Your total score is: <span id="total-score">0</span></h4>
+            </div>
         </div>
         <div id="crystals">
             <img src="assets/images/crystal-1.jpg" class="crystal-image" id="crystal1" alt="Crystal 1">
@@ -41,9 +52,6 @@
             <img src="assets/images/crystal-3.jpg" class="crystal-image" id="crystal3" alt="Crystal 3">
             <img src="assets/images/crystal-4.jpg" class="crystal-image" id="crystal4" alt="Crystal 4">
         </div>
-        <h2>Your total score is:</h2>
-        <div><span id="total-score"></span></div>
-
     </div>
 
     <script src="assets/javascript/game.js"></script>
