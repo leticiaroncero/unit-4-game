@@ -4,7 +4,11 @@
     object-fit: cover;
     border-radius: 25px;
     box-shadow: 5px 5px 15px #333333;
-    margin: 15px 10px 100px
+    margin: 15px 10px
+}
+
+#crystals {
+    margin-bottom: 100px;
 }
 
 .crystal-image:active {
