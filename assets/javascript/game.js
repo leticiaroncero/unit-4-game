@@ -2,36 +2,27 @@ var wins = 0
 var losses = 0
 var winCounter = $("#wins")
 var lossCounter = $("#losses")
+var totalScore;
+var randomNumber;
 
-var randomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
-$("#target-number").text(randomNumber);
-
-var totalScore = 0;
-$("#total-score").text(totalScore);
-
-var imageCrystal = $(".crystal-image");
-for (var i = 0; i < 4; i++) {
-    randomValue = Math.floor(Math.random() * 12 + 1);
-    imageCrystal.eq(i).attr("data-crystalvalue", randomValue)
-}
+newGame()
 
 $(".crystal-image").on("click", function () {
     totalScore += parseInt($(this).attr("data-crystalvalue"))
     $("#total-score").text(totalScore);
 
-
     if (totalScore === randomNumber) {
         wins++
         winCounter.text(wins)
-        reset()
+        newGame()
     } else if (totalScore > randomNumber) {
         losses++
         lossCounter.text(losses)
-        reset()
+        newGame()
     }
 })
 
-function reset() {
+function newGame() {
     randomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
     $("#target-number").text(randomNumber);
     totalScore = 0;
